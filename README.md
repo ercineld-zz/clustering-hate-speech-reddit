@@ -17,22 +17,6 @@ Below table shows the total number of unique subreddits in the whole dataset, th
 
 eddit dataset is one of the biggest text dataset among the publicly available datasets, therefore only a slice of the dataset had been used in this project. I chose 2017 for data analyzing. Below table shows the sizes of processed dataset, initial downloaded file was compressed “.bz” file, through Unix bash code, it had been unzipped as a JSON file. Further filtering was done via “JQ” tool.
 
-Month    Filtered_Json	Full    Unzipped	Zipped File
-2017-01 	14.5 MB	    39.1 GB	  7.8 GB
-2017-02	  13.8 MB	    35.0 GB	  7.0 GB
-2017-03	  12.3 MB	    39.5 GB	  7.9 GB
-2017-04	  12.3 MB	    39.3 GB	  7.6 GB
-2017-05	  13.4 MB	    40.7 GB	  7.3 GB
-2017-06	  23.1 MB	    41.0 GB	  7.4 GB
-2017-07	  16.5 MB	    51.0 GB	  7.8 GB
-2017-08	  16.9 MB	    48.2 GB	  7.9 GB
-2017-09	  14.7 MB	    47.2 GB	  7.8 GB
-2017-10	  11.8 MB	    52.5 GB	  10.0 GB
-2017-11	  10.6 MB	    54.5 GB	  10.0 GB
-2017-12	  11.3 MB	    54.8 GB	  7.6 GB
-
-*Processed file sizes are on the above.*
-
 My first analyze was identifying keywords that might indicate hate speech in comments. Hate speech lexicon identified as;
 “latino, arab, negroe, mexican, homo, homosexual, nigger, muslim,jewish, jew”
 Above keywords had been searched in Pushshift API to define top 10 subreddits that includes most comment which includes those keywords. Pushshift API documentation can be found in “https://github.com/pushshift/api”, it is designed and created to help provide enhanced functionality and search capabilities for searching Reddit comments and submissions. This RESTful API gives full functionality for searching Reddit data and also includes the capability of creating powerful data aggregations. With this API, I was able to quickly find the data that is related with this project. 
