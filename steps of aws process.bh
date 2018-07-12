@@ -1,0 +1,1 @@
+wget $url | bzip2 -dk $filename | aws s3 cp ~/$filename_extracted s3://bucketname | cat $filename_extracted | jq '. "jq json filtering code"' > filename.json | aws s3 cp ~/filename.json s3://bucketname | rm filename.json | rm $filename | rm $filename_extracted

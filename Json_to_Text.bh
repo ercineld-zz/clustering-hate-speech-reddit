@@ -1,0 +1,1 @@
+cat $filtered_file1.json | jq '.[]' > $text_file_name.txt
